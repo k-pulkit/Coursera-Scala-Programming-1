@@ -1,0 +1,7 @@
+.bloop
+.bsp
+.dotfiles-coursera/
+.metals/
+.vscode/
+*.zip
+target*
