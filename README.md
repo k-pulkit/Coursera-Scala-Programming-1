@@ -6,6 +6,9 @@ This repository contains my solutions to the challenging assignments of the Scal
 
 The course provided an in-depth understanding of the Scala programming language. It covered fundamental concepts such as functional programming, object-oriented programming, and more advanced topics like concurrency and parallelism.
 
+[Course link](https://www.coursera.org/learn/scala-functional-programming/home/week/1)
+[Certificate link](https://coursera.org/share/26e3921f4db899d3a5bad64ec6873d10)
+
 ## Assignments
 
 The assignments were designed to test the understanding of the concepts taught in the course. They were challenging and required a good grasp of Scala and problem-solving skills.
