@@ -1,45 +1,72 @@
-# Welcome to your Lab Sandbox
-We’re glad you’re here! Let’s get you started in your Lab Sandbox   
-with a quick README to answer any questions you might have.   
-It’s preconfigured by Coursera and includes all dependencies   
-(libraries and packages) to complete your work in Visual Studio Code.   
-You can practice, run test cases, and work on assignments from your browser.   
-Learn more about the Coursera Lab Sandbox and how to use the VSCode   
-sandbox environment (including how to upload and download files)   
-in the Learner Help Center:   
-https://learner.coursera.help/hc/articles/360062301971  
+# Scala Course Assignments
+
+This repository contains my solutions to the challenging assignments of the Scala course I completed on Coursera.
+
+## About the Course
+
+The course provided an in-depth understanding of the Scala programming language. It covered fundamental concepts such as functional programming, object-oriented programming, and more advanced topics like concurrency and parallelism.
+
+## Assignments
+
+The assignments were designed to test the understanding of the concepts taught in the course. They were challenging and required a good grasp of Scala and problem-solving skills.
 
 
-## How can I get started?
-1. Read Getting Started with Your Lab for important course-specific guidance.  
-2. Download any assessment or starter files that were included   
-   in the course instructions and materials. You can download most files   
-   by clicking on them. If the file opens in a new browser tab, right click   
-   on a blank area of the browser page and select Save As to save your file locally.  
-3. Upload your files into the Lab Sandbox and complete the course work.  
-4. When you’re done, save your work in your sandbox.     
+### 1. Recursion
+
+#### Assignment 1.1: Pascal's Triangle
+The first assignment was to implement a function that computes the elements of Pascal's Triangle. The function takes a column `c` and a row `r`, both counting from 0, and returns the number at that spot in the triangle. This was achieved using a recursive process.
+
+#### Assignment 1.2: Parentheses Balancing
+The second assignment was to write a recursive function that verifies the balancing of parentheses in a string. The function returns true for balanced strings and false for unbalanced ones.
+
+#### Assignment 1.3: Counting Change
+The third assignment was to write a recursive function that counts how many different ways you can make change for an amount, given a list of coin denominations.
 
 
-## How can I receive a score for work completed in the Lab Sandbox?   
-1. To receive a score for your work within Coursera, follow the course   
-   instructions listed within each assignment.  
-2. If you’re working on a Programming Assignment or Peer Review, you can  
-   download your Lab files to your local computer and upload them directly to the  
-   assignment. If you are working on a Quiz, you can use your Lab environment to   
-   complete your work and then select your responses directly within the quiz.  
-3. If you have any questions as you get started, we recommend reviewing  
-   Getting Started with Your Lab for course-specific guidance on how to work  
-   with the Lab Sandbox for this course.    
+### 2. Functional Sets
+
+#### Functional Sets
+You will learn how to represent sets of integers using characteristic functions, which are higher-order functions that take an integer and return a boolean.
+
+#### FP principles
+You will practice writing Scala code using functional programming principles, such as immutability, recursion, and anonymous functions.
+
+#### Testing and debugging
+You will write your own tests for your solutions using the FunSetSuite.scala file, which contains hints and examples.
 
 
-## How can I get help with my Lab Sandbox?
-You can learn more about how to use the Lab Sandbox environment   
-and find tips to troubleshoot in the Learner Help Center.    
+### 3. Object-Oriented Sets
 
-Coursera currently maintains Lab Sandboxes and course instructors don’t   
-have the ability to modify or troubleshoot sandbox environments.   
-If you do run into any time sensitive platform issues, instead of contacting  
-the course instructor and/or staff, reach out to our 24/7 chat support.  
-in the Learner Help Center. https://learner.coursera.help/hc  
+#### Functional Sets
+This assignment is about creating an object-oriented representation based on binary trees. Here are the key points:
 
-Happy learning!   
+- **Objective**: The goal is to work with an object-oriented representation based on binary trees. The assignment involves completing the `TweetSet.scala` file, which defines an abstract class `TweetSet` with two concrete subclasses: `Empty` and `NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet)`. 
+- **Filtering**: You need to implement filtering on tweet sets. The `filter` method takes a predicate (a function that returns a boolean) and returns the subset of all the tweets in the original set for which the predicate is true.
+- **Unions**: You need to implement the `union` method on tweet sets. This method should return a new tweet set which is the union of the current set and another set.
+
+
+### 4. Huffman Coding Assignment
+- **Objective**: This assignment is about implementing Huffman coding, a popular compression algorithm. You'll be working with a binary tree data structure that represents the characters to be encoded and their frequencies.
+
+The assignment has two main parts:
+1. **Encoding**: You'll create a function to encode a character. This is done by traversing from the root of the tree to the leaf containing the character. You'll add a 0 to the representation for each left branch you choose, and a 1 for each right branch.
+2. **Decoding**: You'll also create a function to decode a sequence of bits. Starting at the root of the tree, you'll read the bits one by one. For each 0, you'll choose the left branch, and for each 1, you'll choose the right branch. When you reach a leaf, you'll decode the corresponding character and then start again at the root of the tree.
+
+You'll be provided with a `CodeTree` abstract class and two case classes, `Fork` and `Leaf`, to represent the Huffman tree. You'll need to implement two functions, `weight` and `chars`, using pattern matching on the code tree. The `weight` function should return the total weight (frequency of appearance) of a given Huffman tree, and the `chars` function should return the list of characters defined in a given Huffman tree.
+
+
+### 5. Anagrams
+1. **Finding anagrams**: You need to write a Scala program that can find all the possible anagrams of a given sentence, using a dictionary of meaningful words.
+2. **Using collections and for-comprehensions**: You need to use the Scala Collections API and for-comprehensions to manipulate lists, sets, maps, and other data structures.
+3. **Working with strings and characters**: You need to use the Java String class and its methods to process the characters of the sentence and the words in the dictionary.
+
+
+## Running the Code
+
+To run the code in this repository, you need to have Scala installed on your machine. You can then clone this repository and run the Scala files using the Scala compiler.
+
+```bash
+git clone https://github.com/k-pulkit/scala-course-assignments.git
+cd scala-course-assignments
+sbt test
+```
